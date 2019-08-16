@@ -4,6 +4,7 @@ import Chips from './Chips';
 import Sardines from './Sardines';
 import Soda from './Soda';
 import Food from './Food';
+import Meal from './Meal';
 import { Route, Switch } from 'react-router-dom';
 import Navbar from './Navbar';
 import './App.css';
@@ -29,6 +30,7 @@ function App() {
           path="/food/:name" 
           render={routeProps => <Food {...routeProps} />}
         />
+        <Route exact path="/food/:foodName/drink/:drinkName" component={Meal} />
       </Switch>
     </div>
   );
