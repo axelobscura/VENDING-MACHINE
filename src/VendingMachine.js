@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
+import Message from './Message';
 
 class VendingMachine extends Component {
   constructor(props) {
@@ -9,10 +10,14 @@ class VendingMachine extends Component {
   render() { 
     return ( 
       <div>
-        <Link exact to="/soda">SODA</Link>
-        <Link exact to="/chips">CHIPS</Link>
-        <Link exact to="/sardines">SARDINES</Link>
-        <h1>VENDING MACHINE</h1>
+        <Message>
+          <Link exact to="/soda">SODA</Link>
+          <Link exact to="/chips">CHIPS</Link>
+          <Link exact to="/sardines">SARDINES</Link>
+        </Message>
+        <Message>
+          <h1>VENDING MACHINE</h1>
+        </Message>
       </div>
     );
   }

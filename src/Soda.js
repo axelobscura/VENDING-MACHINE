@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Message from './Message';
 
 class Soda extends Component {
   constructor(props) {
@@ -7,9 +8,11 @@ class Soda extends Component {
   }
   render() { 
     return (
-      <div>
-        <h1>Soda</h1>
-      </div>
+      <Message>
+        <div>
+          <h1>Soda</h1>
+        </div>
+      </Message>
     );
   }
 }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Message from './Message';
 
 class Sardines extends Component {
   constructor(props) {
@@ -7,9 +8,11 @@ class Sardines extends Component {
   }
   render() { 
     return (
-      <div>
-        <h1>Sardines</h1>
-      </div>
+      <Message>
+        <div>
+          <h1>Sardines</h1>
+        </div>
+      </Message>
     );
   }
 }
