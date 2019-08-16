@@ -1,0 +1,18 @@
+.Navbar {
+  background-color: #333;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.Navbar a {
+  margin: 2rem;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.Navbar a.Navbar-active {
+  color: #ff0000;
+}
