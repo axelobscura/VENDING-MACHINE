@@ -1,9 +1,10 @@
 import React from 'react';
-import VendingMachine from './VendingMachine';
+//import VendingMachine from './VendingMachine';
 import Chips from './Chips';
 import Sardines from './Sardines';
 import Soda from './Soda';
 import Food from './Food';
+import FoodSearch from './FoodSearch';
 //import Meal from './Meal';
 import { Route, Switch } from 'react-router-dom';
 import Navbar from './Navbar';
@@ -14,7 +15,11 @@ function App() {
     <div className="App">
       <Navbar />
       <Switch>
-        <Route exact path="/" render={() => <VendingMachine />} />
+        <Route 
+          exact 
+          path="/" 
+          component={FoodSearch}
+        />
         <Route exact path="/chips" render={() => <Chips />} />
         <Route exact path="/sardines" render={() => <Sardines />} />
         <Route exact path="/soda" render={() => <Soda />} />
