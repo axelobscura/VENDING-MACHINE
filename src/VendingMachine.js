@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import Message from './Message';
-import Food from './Food';
+import FoodSearch from "./FoodSearch";
 
 class VendingMachine extends Component {
   constructor(props) {
@@ -18,8 +18,9 @@ class VendingMachine extends Component {
         </Message>
         <Message>
           <h1>VENDING MACHINE</h1>
+          
         </Message>
-        <Food name="burrito" />
+        <FoodSearch />
       </div>
     );
   }
