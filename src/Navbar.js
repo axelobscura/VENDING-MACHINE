@@ -6,10 +6,15 @@ class Navbar extends Component {
   constructor(props) {
     super(props);
     this.handleLogin = this.handleLogin.bind(this);
+    this.handleBack = this.handleBack.bind(this);
   }
   handleLogin(){
     alert("LOGGED YOU IN");
     this.props.history.push("/food/salmon");
+  }
+  handleBack(){
+    alert("BABY GO BACK");
+    this.props.history.goBack();
   }
   render() { 
     return ( 
@@ -20,6 +25,7 @@ class Navbar extends Component {
         <NavLink exact activeClassName="Navbar-active" to="/sardines">Sardines</NavLink>
 
         <button onClick={this.handleLogin}>LOG IN</button>
+        <button onClick={this.handleBack}>BACK</button>
       </div>
      );
   }
