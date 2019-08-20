@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import './Navbar.css';
-import { NavLink } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 
 class Navbar extends Component {
   constructor(props) {
     super(props);
-    this.state = {  }
+    this.handleLogin = this.handleLogin.bind(this);
+  }
+  handleLogin(){
+    alert("LOGGED YOU IN");
+    this.props.history.push("/food/salmon");
   }
   render() { 
     return ( 
@@ -14,9 +18,11 @@ class Navbar extends Component {
         <NavLink exact activeClassName="Navbar-active" to="/chips">Chips</NavLink>
         <NavLink exact activeClassName="Navbar-active" to="/soda">Soda</NavLink>
         <NavLink exact activeClassName="Navbar-active" to="/sardines">Sardines</NavLink>
+
+        <button onClick={this.handleLogin}>LOG IN</button>
       </div>
      );
   }
 }
  
-export default Navbar;
+export default withRouter(Navbar);
